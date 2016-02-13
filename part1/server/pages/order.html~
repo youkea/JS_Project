@@ -14,9 +14,6 @@
   </head>
     
   <body ng-controller="orderCtrl">
-  <h1>Zamówienie numer  <div data-ng-init="getOrder()">
-            {{order.getId}}
-    </div></h1>
     <div class="orderSummary">
 
         <table id="summary">
@@ -61,7 +58,7 @@
            </div>
             <div class="orderBtn">
                 <input type="button" value="Powrót" ng-click="goBack()">
-                <button ng-click="orderPizza()">Zatwierdź</button>
+                <button ng-click="orderPizza($scope)">Zatwierdź</button>
              </div> 
         </form>
     

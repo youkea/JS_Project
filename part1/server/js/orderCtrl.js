@@ -1,4 +1,4 @@
-angular.module('pizzaPortal').controller('orderCtrl', function($scope, $http, orders) {
+angular.module('pizzaPortal').controller('orderCtrl', function($scope, $http, orders, $location) {
         
         $scope.orders = orders;
    

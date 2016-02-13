@@ -14,7 +14,7 @@ angular.module('pizzaPortal').controller('mainCtrl', function(orders, $location,
             var order = {};
 	
 	    order.name = itemMenu.name;
-           
+            order.id = itemMenu.id;
             if (typeof itemMenu.quantity !== 'undefined') {
                 order.quantity = itemMenu.quantity;
             } 
