@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl" ng-app="pizzaPortal">
+<head>
+  <head>
+    <meta charset="utf-8">
+    <title>Stan zamówienia</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="/mainCtrl.js"></script>
+    <script src="/orderCtrl.js"></script>
+    <script src="/statusCtrl.js"></script>
+    <script src="/contactCtrl.js"></script>
+  </head>
+  <body ng-controller="statusCtrl">
+    <h1>Stan zamówienia nr
+       <div data-ng-init="getStatus()">
+   
+        {{statusResponse.id}}
+        {{statusResponse.quantity}}
+
+    </div>
+ </h1>
+  </body>
+</html>

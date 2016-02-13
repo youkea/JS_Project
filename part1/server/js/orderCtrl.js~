@@ -1,0 +1,15 @@
+angular.module('pizzaPortal').controller('orderCtrl', function($scope, $http, orders) {
+        
+        $scope.orders = orders;
+   
+        $scope.getContact = function () {
+		$http.get('/order').success(function (response) {
+			$scope.orderResponse = response;
+		});
+	};
+  
+	$scope.goBack = function() {
+            window.history.back();
+        };
+});
+
