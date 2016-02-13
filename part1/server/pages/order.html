@@ -14,9 +14,6 @@
   </head>
     
   <body ng-controller="orderCtrl">
-  <h1>Zamówienie numer  <div data-ng-init="getOrder()">
-            {{orderResponse.name}}
-    </div></h1>
     <div class="orderSummary">
 
         <table id="summary">
@@ -43,7 +40,7 @@
     
     <div class="orderForm">  
         <p>Wypełnij dane potrzebne do zamówienia</p>
-        <form name="myForm" action="status/:orderId">
+        <form name="myForm">
           <div ng-class="{error: isInvalid('phoneNumber')}">
                 <label>
                     Numer telefonu: 

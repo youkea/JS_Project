@@ -12,6 +12,7 @@ angular.module('pizzaPortal').controller('mainCtrl', function(orders, $location,
 
 	 $scope.addToBasket = function (itemMenu) {        
             var order = {};
+	
 	    order.name = itemMenu.name;
            
             if (typeof itemMenu.quantity !== 'undefined') {

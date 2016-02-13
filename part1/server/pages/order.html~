@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pl" ng-app="pizzaPortal">
-<head>
   <head>
     <meta charset="utf-8">
     <title>Zamówienia</title>
@@ -16,7 +15,7 @@
     
   <body ng-controller="orderCtrl">
   <h1>Zamówienie numer  <div data-ng-init="getOrder()">
-            {{orderResponse.name}}
+            {{order.getId}}
     </div></h1>
     <div class="orderSummary">
 
@@ -44,34 +43,26 @@
     
     <div class="orderForm">  
         <p>Wypełnij dane potrzebne do zamówienia</p>
-        <form name="myForm" action="status/:orderId">
+        <form name="myForm">
           <div ng-class="{error: isInvalid('phoneNumber')}">
                 <label>
                     Numer telefonu: 
                 </label>
                 <input type="text" name="phoneNumber" placeholder="Podaj nr telefonu" ng-model="phoneNumber" required/>
-                <span ng-show="isInvalid('phoneNumber')">Numer telefony jest wymagany</span>
+                <span ng-show="isInvalid('phoneNumber')">Numer telefonu jest wymagany.</span>
 
         </div>
                <div ng-class="{error: isInvalid('street')}">
                 <label>
-                    Ulica:
+                    Adres:
                 </label>
                 <input type="text" placeholder="Podaj adres" name="street" ng-model="street" required>
-                <span ng-show="isInvalid('street')">Dodanie adresu jest wymagane</span>
+                <span ng-show="isInvalid('street')">Adres jest wymagany.</span>
            </div>
-
-            <div>
-                <label>
-                    Uwagi: 
-                </label>
-                <input class="order" placeholder="Dodatkowe informacje" type="text" name="remarks">
-            
             <div class="orderBtn">
                 <input type="button" value="Powrót" ng-click="goBack()">
-                <button ng-disabled="myForm.$invalid">Zatwierdź</button>
+                <button ng-click="orderPizza()">Zatwierdź</button>
              </div> 
-            </div>
         </form>
     
     

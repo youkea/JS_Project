@@ -2,8 +2,8 @@ angular.module('pizzaPortal').controller('orderCtrl', function($scope, $http, or
         
         $scope.orders = orders;
    
-        $scope.getContact = function () {
-		$http.get('/order').success(function (response) {
+        $scope.getOrder = function () {
+		$http.get('/order/' + $scope.orderId).success(function (response) {
 			$scope.orderResponse = response;
 		});
 	};

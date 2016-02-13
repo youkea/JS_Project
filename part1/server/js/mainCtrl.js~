@@ -8,11 +8,12 @@ angular.module('pizzaPortal').controller('mainCtrl', function(orders, $location,
          $scope.orders = orders;
 	 $scope.deleteButton = "delete.png";
 	 $scope.addButton = "add.png";
-	 $scope.addButton = "order.png";
+	 $scope.orderButton = "order.png";
 
 	 $scope.addToBasket = function (itemMenu) {        
             var order = {};
 	    order.name = itemMenu.name;
+	    order.id = itemMenu.id;
            
             if (typeof itemMenu.quantity !== 'undefined') {
                 order.quantity = itemMenu.quantity;
