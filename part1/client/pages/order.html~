@@ -14,7 +14,7 @@
   </head>
     
   <body ng-controller="orderCtrl">
-    <div class="orderSummary">
+    <div class="orderSummary, center">
 
         <table id="summary">
                     <tr>
@@ -38,9 +38,9 @@
 
     </div>
     
-    <div class="orderForm">  
-        <p>Wypełnij dane potrzebne do zamówienia</p>
-        <form name="myForm">
+    <div class="orderForm, center">  
+        <p>Podaj dane kontaktowe:</p>
+        <form name="dataForm">
           <div ng-class="{error: isInvalid('phoneNumber')}">
                 <label>
                     Numer telefonu: 
@@ -58,7 +58,7 @@
            </div>
             <div class="orderBtn">
                 <input type="button" value="Powrót" ng-click="goBack()">
-                <button ng-click="orderPizza($scope)">Zatwierdź</button>
+                <button ng-click="orderPizza()">Zatwierdź</button>
              </div> 
         </form>
     

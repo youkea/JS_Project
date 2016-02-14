@@ -12,8 +12,8 @@
     <script src="/contactCtrl.js"></script>
   </head>
   <body ng-controller="statusCtrl">
-    <h1>Stan zamówienia nr
-       <div data-ng-init="getStatus()">
+
+       <div data-ng-init="getStatus()" class="center">
    <b>Numer zamówienia: {{orderId}} </b>
         <table>
                 <tr>

@@ -17,11 +17,11 @@ var app = express(),
     i = 0;
 
 app.use(express.static(__dirname + '/../build/'));
-app.use(express.static(__dirname + '/css'));
-app.use(express.static(__dirname + '/pages'));
-app.use(express.static(__dirname + '/js'));
-app.use(express.static(__dirname + '/lib'));
-app.use(express.static(__dirname + '/images'));
+app.use(express.static(__dirname + '/../client/css'));
+app.use(express.static(__dirname + '/../client/pages'));
+app.use(express.static(__dirname + '/../client/js'));
+app.use(express.static(__dirname + '/../client/lib'));
+app.use(express.static(__dirname + '/../client/images'));
 
 
 app.use(bodyParser.urlencoded({

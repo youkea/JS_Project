@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pl" ng-app="pizzaPortal">
-<head>
   <head>
     <meta charset="utf-8">
     <title>Pizzeria Italiano</title>
@@ -14,9 +13,9 @@
     <script src="/contactCtrl.js"></script>
  </head>
   <body ng-controller="mainCtrl">
-	  <div class="menu">
-                <span class="text">Menu</span>
+	
           <div class="menu" data-ng-init="getMenu()"> 
+	  <span class="text">Menu</span>
             <table id="menu">
 		<div>
                 <tr>
@@ -45,6 +44,7 @@
 	 </div>
 
           <div class="basket">
+	
                 <span class="text">Koszyk</span>
 		<table id="basket">
                 <tr>
@@ -69,6 +69,6 @@
 		</div>
           	</tr>
   	</div> 
-      </div>          
+         
  </body>
 </html>

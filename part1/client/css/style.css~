@@ -13,7 +13,7 @@ body{
 .text{
   font-family: Arial;
   font-weight: 300;
-  font-size: 30px;
+  font-size: 20px;
   color: #000033;
 }
 ul {
@@ -66,3 +66,23 @@ th {
 .order{
 	width:150px;
 }
+.center {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+
+p{
+  font-family: Arial;
+  font-weight: 300;
+  font-size: 20px;
+  color: #000033;
+}
+.orderBtn{
+  margin-top:30px;
+  margin-bottom:50px;
+}
+button{
+  font-size: 16px;
+}
+

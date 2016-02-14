@@ -14,6 +14,7 @@
     <script src="/contactCtrl.js"></script>
  </head>
   <body ng-controller="mainCtrl">
+	
 	  <div class="menu">
           <div class="menu" data-ng-init="getMenu()"> 
 	  <span class="text">Menu</span>
@@ -45,6 +46,7 @@
 	 </div>
 
           <div class="basket">
+	
                 <span class="text">Koszyk</span>
 		<table id="basket">
                 <tr>
@@ -69,6 +71,7 @@
 		</div>
           	</tr>
   	</div> 
-      </div>          
+      </div>
+         
  </body>
 </html>

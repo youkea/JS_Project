@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pl" ng-app="pizzaPortal">
-<head>
   <head>
     <meta charset="utf-8">
     <title>Pizzeria</title>
@@ -15,11 +14,10 @@
 
   </head>
   <body ng-controller="contactCtrl">
-    <h1>Nasz adres:</h1>
-  
-      <div data-ng-init="getContact()">
+
+      <div data-ng-init="getContact()" class="center">
    
-        <h2>{{contactResponse.name}} Pizzeria Italiano</h2><br>
+        <h2>{{contactResponse.name}}</h2><br>
         Ulica: {{contactResponse.address.street}}<br>
         Miasto: {{contactResponse.address.city}}<br>
         Telefon: {{contactResponse.phone}}<br>
