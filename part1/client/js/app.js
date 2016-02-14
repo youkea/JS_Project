@@ -11,7 +11,7 @@ var pizzaPortal = angular.module('pizzaPortal', ['ui.router']).config(function (
             controller: 'orderCtrl'
         })
         .state('status', {
-            url: '/status',
+            url: '/status/:id',
             templateUrl: 'status.html',
             controller: 'statusCtrl'
         })
