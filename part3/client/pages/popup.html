@@ -1,0 +1,77 @@
+<div class="pizzaPersonalization"> 
+    <p>Personalizacja pizzy</p>
+    
+    <table>
+        <th>Nazwa</th> 
+        <th>Cena</th> 
+        <th></th> 
+        <tr ng-repeat="ingredient in ingredientsResponse">
+            <td> 
+               {{ingredient.label}} 
+            </td>
+            <td> 
+               {{ingredient.price.toFixed(2)}} 
+            </td>
+            <td>
+                <button ng-click="addIngredient(ingredient)">Dodaj</button>
+            </td>
+        </tr>
+    </table>
+
+</div>
+
+<div class="orderPersonalization">
+    <p>Zamówienie</p>
+    
+    <table> 
+    <tr> 
+        <th>Nazwa</th> 
+        <th>Ilość</th> 
+        <th>Cena</th> 
+    </tr> 
+    <tr> 
+        <td>{{actualOrder.name}}</td>    
+        <td>{{actualOrder.quantity}}</td>
+        <td>{{actualOrder.price.toFixed(2)}}</td>
+    </tr> 
+    <tr></tr> 
+    
+    </table>
+    
+    <div class="basic">
+        <p>Podstawowe składniki:</p>
+        <table>
+            <th>Składnik</th>
+            <th></th>
+            <tr ng-repeat="ingredient in actualOrder.ingredients">
+                <td>{{ingredient}}</td> 
+                <td>
+                    <button ng-click="deleteBaseIngr(ingredient)">Usuń</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="extra">
+        <p>Dodatkowe składniki:</p>
+        <table>
+            <th>Składnik</th>
+            <th>Cena</th>
+            <th></th>
+            <tr ng-repeat="extra in extraIngredients">
+                <td>{{extra.label}}</td> 
+                <td>{{extra.price.toFixed(2)}}</td>
+                <td>
+                    <button ng-click="deleteExtraIngr(extra)">Usuń</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="popup-price">
+        <p>
+            <b>Razem do zapłaty: {{totalPrice()}} zł</b>
+            <button ng-click="closeThisDialog('Gotowe')">Gotowe</button>
+        </p>
+    </div>
+</div>
